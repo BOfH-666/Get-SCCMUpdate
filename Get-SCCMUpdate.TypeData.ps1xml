@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+    <Type>
+        <Name>Microsoft.Management.Infrastructure.CimInstance#root/ccm/clientsdk/CCM_SoftwareUpdate</Name>
+        <Members>
+            <ScriptProperty>
+                <Name>EvaluationStateName</Name>
+                <GetScriptBlock>
+                    $EvaluationState = @{
+                        Name = @{
+                            0  = 'None'
+                            1  = 'Available'
+                            2  = 'Submitted'
+                            3  = 'Detecting'
+                            4  = 'PreDownload'
+                            5  = 'Downloading'
+                            6  = 'WaitInstall'
+                            7  = 'Installing'
+                            8  = 'PendingSoftReboot'
+                            9  = 'PendingHardReboot'
+                            10 = 'WaitReboot'
+                            11 = 'Verifying'
+                            12 = 'InstallComplete'
+                            13 = 'Error'
+                            14 = 'WaitServiceWindow'
+                            15 = 'WaitUserLogon'
+                            16 = 'WaitUserLogoff'
+                            17 = 'WaitJobUserLogon'
+                            18 = 'WaitUserReconnect'
+                            19 = 'PendingUserLogoff'
+                            20 = 'PendingUpdate'
+                            21 = 'WaitingRetry'
+                            22 = 'WaitPresModeOff'
+                            23 = 'WaitForOrchestration'
+                        }
+                    }
+                    $EvaluationState.Name.[INT]$this.EvaluationState
+                </GetScriptBlock>
+            </ScriptProperty>
+            <MemberSet>
+                <Name>PSStandardMembers</Name>
+                <Members>
+                    <PropertySet>
+                        <Name>DefaultDisplayPropertySet</Name>
+                        <ReferencedProperties>
+                            <Name>ArticleID</Name>
+                            <Name>EvaluationStateName</Name>
+                            <Name>Name</Name>
+                        </ReferencedProperties>
+                    </PropertySet>
+                </Members>
+            </MemberSet>
+        </Members>
+    </Type>
+</Types>
