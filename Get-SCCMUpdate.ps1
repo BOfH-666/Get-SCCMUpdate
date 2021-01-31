@@ -57,7 +57,7 @@ function Get-SCCMUpdate {
     process {
         $ComputerNameList = $ComputerName
         foreach ($ComputerName in $ComputerNameList) {
-            if (Test-Connection -TargetName $ComputerName -Count 1 -TimeoutSeconds 1 -Quiet) {
+            if (Test-Connection -ComputerName $ComputerName -Count 1 -TimeoutSeconds 1 -Quiet) {
                 $NewCimSessionParams = @{
                     ComputerName = $ComputerName
                 }
